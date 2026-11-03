@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stefane Tenório | Portfólio</title>
+<meta name="description" content="Portfólio de Stefane Tenório, estudante de Análise e Desenvolvimento de Sistemas em busca do primeiro estágio em tecnologia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFD60A;--p:#FF3E96;--k:#000;--w:#FFFBEA;--bd:3px solid var(--k);--sh:6px 6px 0 var(--k)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--w);color:var(--k);line-height:1.6;font-size:1.05rem}
+h1,h2,h3{font-family:'Bagel Fat One','Arial Black',sans-serif;font-weight:400;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--p);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:28px;display:inline-block;background:var(--p);color:var(--k);padding:4px 16px;border:var(--bd);box-shadow:var(--sh);transform:rotate(-1.5deg)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--k);border-bottom:var(--bd)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.logo{font-family:'Bagel Fat One',sans-serif;color:var(--y);text-decoration:none;font-size:1.3rem}
+nav ul{list-style:none;padding:0;display:flex;gap:6px;flex-wrap:wrap}
+nav li a{display:block;color:var(--w);text-decoration:none;font-weight:700;font-size:.95rem;padding:4px 12px;border-radius:99px}
+nav li a:hover{background:var(--p);color:var(--k)}
+
+/* hero */
+.hero{background:var(--y);border-bottom:var(--bd);padding:64px 0 0;overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;padding-bottom:64px}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem);letter-spacing:-.01em}
+.hero h1 span{display:inline-block;background:var(--k);color:var(--y);padding:0 14px;margin-top:6px;transform:rotate(-2deg);box-shadow:6px 6px 0 var(--p)}
+.hero p.sub{font-size:1.2rem;font-weight:500;margin:24px 0;max-width:34ch}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font-weight:700;text-decoration:none;background:var(--w);border:var(--bd);padding:10px 22px;border-radius:99px;box-shadow:4px 4px 0 var(--k);cursor:pointer;font-size:1rem;font-family:inherit;color:var(--k);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--k)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--k)}
+.btn.pink{background:var(--p)}
+.btn.dark{background:var(--k);color:var(--y);box-shadow:4px 4px 0 var(--p)}
+.sticker{justify-self:center;width:min(280px,70vw);aspect-ratio:1;background:var(--p);border:var(--bd);border-radius:50%;box-shadow:var(--sh);display:grid;place-items:center;text-align:center;padding:28px;transform:rotate(8deg);animation:wob 4s ease-in-out infinite}
+.sticker b{font-family:'Bagel Fat One',sans-serif;font-weight:400;font-size:2rem;line-height:1.05;display:block}
+.sticker small{font-size:1rem;font-weight:700;display:block;margin-top:8px}
+@keyframes wob{50%{transform:rotate(-4deg) scale(1.04)}}
+
+/* marquee */
+.marquee{background:var(--k);color:var(--y);border-bottom:var(--bd);overflow:hidden;white-space:nowrap;font-family:'Bagel Fat One',sans-serif;font-size:1.4rem;padding:10px 0}
+.marquee div{display:inline-block;animation:slide 22s linear infinite}
+.marquee i{color:var(--p);font-style:normal;margin:0 18px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sobre */
+.about{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start}
+.box{background:#fff;border:var(--bd);box-shadow:var(--sh);padding:24px;border-radius:18px}
+.about p+p{margin-top:12px}
+.facts{background:var(--y)}
+.facts h3{font-size:1.4rem;margin-bottom:10px}
+.facts ul{padding-left:20px}
+.facts li{margin-bottom:6px}
+
+/* skills */
+.skills-bg{background:var(--p);border-block:var(--bd)}
+.skills-bg h2{background:var(--y)}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{background:var(--w);border:var(--bd);border-radius:99px;padding:8px 18px;font-weight:700;box-shadow:4px 4px 0 var(--k);font-family:inherit;font-size:1rem;color:var(--k);cursor:pointer;transition:transform .15s,background .15s}
+.chip:hover,.chip[aria-pressed=true]{background:var(--y);transform:rotate(-3deg) scale(1.06)}
+.chip em{font-style:normal;font-weight:500;font-size:.85rem;margin-left:6px;opacity:.75}
+#skillnote{margin-top:22px;font-weight:700;min-height:1.6em}
+.lang{margin-top:22px;display:inline-block;background:var(--k);color:var(--y);padding:8px 18px;border-radius:12px;font-weight:700}
+
+/* projetos */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px}
+.proj{max-width:460px;background:#fff;border:var(--bd);box-shadow:var(--sh);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s}
+.proj:hover{transform:rotate(-1deg) translateY(-4px)}
+.proj .top{height:130px;border-bottom:var(--bd);display:grid;place-items:center;font-family:'Bagel Fat One',sans-serif;font-size:2.6rem}
+.proj:nth-child(1) .top{background:var(--y)}
+.proj:nth-child(2) .top{background:var(--p)}
+.proj .body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.proj h3{font-size:1.6rem}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.tags span{background:var(--k);color:var(--y);font-size:.85rem;font-weight:700;padding:2px 12px;border-radius:99px}
+.proj .btn{align-self:flex-start}
+
+/* formação */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.edu h3{font-size:1.5rem;margin-bottom:8px}
+.when{display:inline-block;background:var(--p);border:var(--bd);border-radius:99px;padding:0 14px;font-weight:700;margin-bottom:10px}
+.soft{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.soft div{background:var(--y);border:var(--bd);border-radius:14px;padding:10px 12px;font-weight:700;text-align:center;box-shadow:3px 3px 0 var(--k)}
+.soft div:nth-child(even){background:var(--p)}
+
+/* contato */
+.contact{background:var(--y);border-top:var(--bd);text-align:center}
+.contact h2{background:var(--k);color:var(--y);transform:rotate(1.5deg)}
+.contact p{max-width:46ch;margin:0 auto 28px;font-weight:500}
+.contact .btns{justify-content:center}
+#copied{min-height:1.6em;margin-top:18px;font-weight:700}
+footer{background:var(--k);color:var(--w);text-align:center;padding:22px;font-size:.95rem}
+footer a{color:var(--y)}
+
+@media(max-width:760px){
+ .hero .wrap,.about,.edu{grid-template-columns:1fr}
+ .sticker{order:-1;width:200px;padding:18px}.sticker b{font-size:1.5rem}
+ section{padding:52px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Principal">
+ <div class="wrap">
+  <a class="logo" href="#topo">ST</a>
+  <ul>
+   <li><a href="#sobre">Sobre</a></li>
+   <li><a href="#habilidades">Habilidades</a></li>
+   <li><a href="#projetos">Projetos</a></li>
+   <li><a href="#formacao">Formação</a></li>
+   <li><a href="#contato">Contato</a></li>
+  </ul>
+ </div>
+</nav>
+
+<header class="hero" id="topo">
+ <div class="wrap">
+  <div>
+   <h1>Oi, eu sou a<br><span>Stefane Tenório</span></h1>
+   <p class="sub">Estudante de Análise e Desenvolvimento de Sistemas, criando interfaces com HTML, CSS e JavaScript.</p>
+   <div class="btns">
+    <a class="btn pink" href="#projetos">Ver projetos</a>
+    <a class="btn" href="#contato">Vamos conversar</a>
+   </div>
+  </div>
+  <div class="sticker" aria-label="Buscando o primeiro estágio em tecnologia">
+   <div><b>Buscando o 1º estágio</b><small>em tecnologia</small></div>
+  </div>
+ </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+ <div>
+  HTML5<i>★</i>CSS3<i>★</i>JavaScript<i>★</i>Manipulação do DOM<i>★</i>Git e GitHub<i>★</i>Lógica de programação<i>★</i>HTML5<i>★</i>CSS3<i>★</i>JavaScript<i>★</i>Manipulação do DOM<i>★</i>Git e GitHub<i>★</i>Lógica de programação<i>★</i>
+  HTML5<i>★</i>CSS3<i>★</i>JavaScript<i>★</i>Manipulação do DOM<i>★</i>Git e GitHub<i>★</i>Lógica de programação<i>★</i>HTML5<i>★</i>CSS3<i>★</i>JavaScript<i>★</i>Manipulação do DOM<i>★</i>Git e GitHub<i>★</i>Lógica de programação<i>★</i>
+ </div>
+</div>
+
+<main>
+<section id="sobre">
+ <div class="wrap">
+  <h2>Sobre mim</h2>
+  <div class="about">
+   <div class="box">
+    <p>Sou estudante de Análise e Desenvolvimento de Sistemas, em fase final da graduação, e procuro a minha primeira oportunidade de estágio na área de tecnologia.</p>
+    <p>Tenho conhecimentos básicos em HTML, CSS e JavaScript e desenvolvo projetos próprios para praticar lógica de programação, criação de interfaces e manipulação do DOM.</p>
+    <p>Aprendo com facilidade, gosto de receber feedback e quero contribuir com a equipe enquanto desenvolvo minhas habilidades técnicas.</p>
+   </div>
+   <aside class="box facts">
+    <h3>Rapidinho</h3>
+    <ul>
+     <li>Recife, PE</li>
+     <li>UNINASSAU, 2024–2027</li>
+     <li>Inglês intermediário</li>
+     <li>Foco em front-end</li>
+    </ul>
+   </aside>
+  </div>
+ </div>
+</section>
+
+<section id="habilidades" class="skills-bg">
+ <div class="wrap">
+  <h2>Habilidades</h2>
+  <div class="chips" role="group" aria-label="Habilidades técnicas">
+   <button class="chip" data-note="Estrutura e estilo das minhas páginas, em todos os projetos abaixo.">HTML5 e CSS3</button>
+   <button class="chip" data-note="Nível básico, e é onde estou praticando mais: lógica, eventos e interação.">JavaScript <em>básico</em></button>
+   <button class="chip" data-note="Treino com projetos próprios, como a calculadora web.">Lógica de programação</button>
+   <button class="chip" data-note="Faço o site reagir ao que a pessoa faz, mudando elementos da página.">Manipulação do DOM</button>
+   <button class="chip" data-note="Noções: adaptar o layout para telas diferentes.">Design responsivo <em>noções</em></button>
+   <button class="chip" data-note="Noções: pensar em como a pessoa vai usar a interface.">UX/UI <em>noções</em></button>
+   <button class="chip" data-note="Controle de versão e publicação dos meus projetos.">Git e GitHub</button>
+   <button class="chip" data-note="Meu editor de código no dia a dia.">Visual Studio Code</button>
+  </div>
+  <p id="skillnote" aria-live="polite">Clique em uma habilidade para saber mais.</p>
+  <span class="lang">Inglês: intermediário</span>
+ </div>
+</section>
+
+<section id="projetos">
+ <div class="wrap">
+  <h2>Projetos</h2>
+  <div class="grid">
+   <article class="proj">
+    <div class="top" aria-hidden="true">7 × 8</div>
+    <div class="body">
+     <h3>Calculadora web</h3>
+     <p>Aplicação interativa para operações matemáticas, com interação do usuário e manipulação do DOM.</p>
+     <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+     <a class="btn" href="https://stefanetenorio.github.io/Calculadora/" target="_blank" rel="noopener">Abrir projeto</a>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="formacao" class="skills-bg" style="background:var(--w);border-top:0">
+ <div class="wrap">
+  <h2 style="background:var(--y)">Formação e competências</h2>
+  <div class="edu">
+   <div class="box">
+    <span class="when">2024–2027</span>
+    <h3>Tecnologia em Análise e Desenvolvimento de Sistemas</h3>
+    <p>UNINASSAU, Recife, PE. Conclusão prevista em 2027.</p>
+   </div>
+   <div class="box">
+    <h3>Competências</h3>
+    <div class="soft">
+     <div>Aprendizado rápido</div>
+     <div>Organização</div>
+     <div>Comprometimento</div>
+     <div>Proatividade em projetos de estudo</div>
+     <div>Abertura a feedback e colaboração</div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<section id="contato" class="contact">
+ <div class="wrap">
+  <h2>Vamos conversar?</h2>
+  <p>Estou em busca da minha primeira oportunidade de estágio em tecnologia. Me chama por e-mail ou LinkedIn.</p>
+  <div class="btns">
+   <a class="btn dark" href="mailto:Edileuzatenorio2005@gmail.com">Enviar e-mail</a>
+   <button class="btn pink" id="copy" type="button">Copiar e-mail</button>
+   <a class="btn" href="https://www.linkedin.com/in/edileuza-tenorio/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p id="copied" aria-live="polite"></p>
+ </div>
+</section>
+
+<footer>
+ Feito por Stefane Tenório · Recife, PE · <a href="#topo">Voltar ao topo</a>
+</footer>
+
+<script>
+(function(){
+ var chips=document.querySelectorAll('.chip'),note=document.getElementById('skillnote');
+ chips.forEach(function(c){
+  c.setAttribute('aria-pressed','false');
+  c.addEventListener('click',function(){
+   var on=c.getAttribute('aria-pressed')==='true';
+   chips.forEach(function(x){x.setAttribute('aria-pressed','false')});
+   if(on){note.textContent='Clique em uma habilidade para saber mais.';return}
+   c.setAttribute('aria-pressed','true');
+   note.textContent=c.dataset.note;
+  });
+ });
+ var email='Edileuzatenorio2005@gmail.com',out=document.getElementById('copied');
+ document.getElementById('copy').addEventListener('click',function(){
+  function ok(){out.textContent='E-mail copiado!'}
+  function fail(){out.textContent='Não deu para copiar. Use: '+email}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(email).then(ok,fail)}else{fail()}
+ });
+})();
+</script>
+</body>
+</html>
